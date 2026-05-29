@@ -7,16 +7,16 @@ import LoadingPage from "./LoadingPage"
 
 function App() { 
 
-  return ( <LoadingPage />
+  return ( 
 
-    // <div className='page-shell'>
-    //   <Navbar />
-    //   <main className='container home-page'>
-    //     <PlayerSearch />
-    //     <TrendingComparisons />
-    //     <RecentComparisons />
-    //   </main>
-    // </div>
+    <div className='page-shell'>
+      <Navbar />
+      <main className='container home-page'>
+        <PlayerSearch />
+        <TrendingComparisons />
+        <RecentComparisons />
+      </main>
+    </div>
 
   );
 }
