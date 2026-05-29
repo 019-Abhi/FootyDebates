@@ -1,0 +1,37 @@
+.loading-page {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.loading-grid {
+    display: grid;
+    gap:0.8 rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.loading-card {
+    min-height: 88px;
+    border: 1px solid red;
+    background: grey;
+    background-size: 200% 100%;
+    animation: pulse 1.4s linear infinite;
+}
+
+.loading-card--tall {
+    min-height: 240px
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}
