@@ -7,6 +7,7 @@ const SEASON = 2026;
 const MIN_QUERY_LEN = 2;
 const DEBOUNCE_MS = 300;
 
+
 function PlayerSearch() {
 
     const navigate = useNavigate();

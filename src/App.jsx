@@ -13,8 +13,6 @@ function App() {
       <Navbar />
       <main className='container home-page'>
         <PlayerSearch />
-        <TrendingComparisons />
-        <RecentComparisons />
       </main>
     </div>
 
