@@ -56,7 +56,7 @@
     border-color: #79d043;
 }
 
-.search-block__dropdown {
+.search_block_dropdown {
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
@@ -70,7 +70,7 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
-.search-block__option {
+.search_block_option {
   width: 100%;
   background: transparent;
   border: none;
@@ -84,19 +84,25 @@
   transition: background 0.15s ease;
 }
 
-.search-block__option:hover {
+.search_block_option:hover {
   background: #1b2430;
 }
 
-.search-block__option img {
+.search_block_option img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.search-block__muted {
+.search_block_muted {
   padding: 0.9rem 1rem;
   color: #a7b0bf;
+  font-size: 0.9rem;
+}
+
+.search_panel_error {
+  margin-top: 1rem;
+  color: #ff8d8d;
   font-size: 0.9rem;
 }
