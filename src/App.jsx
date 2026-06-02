@@ -11,7 +11,6 @@ function App() {
   return ( 
 
     <div className='page-shell'>
-      <Navbar />
       <main className='container home-page'>
         <PlayerSearch />
       </main>

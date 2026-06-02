@@ -106,3 +106,31 @@
   color: #ff8d8d;
   font-size: 0.9rem;
 }
+
+.compare-btn {
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.5rem;
+    background: #79d043;
+    color: #0f1508;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.compare-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-panel {
+    padding: 1.25rem;
+  }
+}

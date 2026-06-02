@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { searchPlayers } from "../services/apiFootball";
+import { searchPlayers } from "./services/apicall.js";
 import "./PlayerSearch.css";
 
 const SEASON = 2026;
