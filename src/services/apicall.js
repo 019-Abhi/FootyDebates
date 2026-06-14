@@ -9,7 +9,8 @@ function getHeaders() {
     return {"x-apisports-key": apikey};
 }
 
-async function FetchData(pathname, query = {}) {
+
+async function apiFootballFetch(pathname, query = {}) {
 
     const url = new URL(`${API_BASE}${pathname}`);
     Object.entries(query).forEach(([key, value]) => {
@@ -32,7 +33,7 @@ async function FetchData(pathname, query = {}) {
 export async function searchPlayers(query) {
     if(!query || query.trim().length < 3) return [];
     
-    const response = await FetchData("/players/profiles", {search: query.trim()});
+    const response = await apiFootballFetch("/players/profiles", {search: query.trim()});
 
     return response.slice(0,8).map((entry) => ({
         id: entry.player?.id,

@@ -4,7 +4,6 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import PlayerSearch from './PlayerSearch'
-import LoadingPage from "./LoadingPage"
 
 function App() { 
 
