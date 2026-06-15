@@ -28,7 +28,7 @@ function StatRow({ label, A, B}) {
 
 }
 
-function PlayerCard{(data)} {
+function PlayerCard({data}) {
 
     if (!data) return null;
 
