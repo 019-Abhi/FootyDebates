@@ -75,11 +75,11 @@ router.post("/", async (req, res) => {
 
         db.run(
             "INSERT INTO stats (player_id, goals, assists, appearances, minutes, yellow_cards, red_cards) VALUES (?,?,?,?,?,?,?)",
-            [playerId, goals || 0, assists || 0, appearances || 0, minutes || 0, yellow_cards || 0, red_cards || 0]
+            [playerid, goals || 0, assists || 0, appearances || 0, minutes || 0, yellow_cards || 0, red_cards || 0]
         );
 
         saveDb();
-        res.status(201).json({id:playerId, message:"Player added"});
+        res.status(201).json({id:playerid, message:"Player added"});
 
     } catch (err) {
         res.status(500).json({ error: err.message });
@@ -106,7 +106,7 @@ router.put("/:id", async (req, res) => {
 
         saveDb();
         res.json({ message: "Player updated"})
-    } catch {
+    } catch (err) {
         res.status(500).json({error: err.message});
     }
 });

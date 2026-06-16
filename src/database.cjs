@@ -1,15 +1,12 @@
-const initSqlJs = reture("sql.js");
+const initSqlJs = require("sql.js");
 const fs = require("fs");
-const { setDefaultAutoSelectFamily } = require("net");
 const path = require("path");
-const { data } = require("react-router-dom");
-const { saveDb } = require("../../cursor_test/src/database.cjs");
 
 const DB_PATH = path.join(__dirname, "players.db");
 
 let db;
 
-async function getdb() {
+async function getDb() {
     if (db) return db;
 
     const SQL = await initSqlJs();
@@ -21,18 +18,17 @@ async function getdb() {
         db = new SQL.Database();
         db.run(`
             CREATE TABLE IF NOT EXISTS players (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            photo TEXT,
-            nationality TEXT,
-            age INTEGER,
-            club TEXT,
-            club_logo TEXT,
-            position TEXT,
-            season TEXT NOT NULL
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                photo TEXT,
+                nationality TEXT,
+                age INTEGER,
+                club TEXT,
+                club_logo TEXT,
+                position TEXT,
+                season TEXT NOT NULL
             );
         `);
-
         db.run(`
             CREATE TABLE IF NOT EXISTS stats (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -43,13 +39,13 @@ async function getdb() {
                 minutes INTEGER DEFAULT 0,
                 yellow_cards INTEGER DEFAULT 0,
                 red_cards INTEGER DEFAULT 0,
-                FOREIGN KEY (player_id) REFERENCES players(id) 
+                FOREIGN KEY (player_id) REFERENCES players(id)
             );
         `);
         saveDb();
     }
-    return db;
 
+    return db;
 }
 
 function saveDb() {

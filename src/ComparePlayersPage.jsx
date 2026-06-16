@@ -6,7 +6,7 @@ import "./ComparePlayersPage.css";
 const STAT_ROWS = [
     { label: "Goals", key: "goals"},
     { label: "Assists", key: "assists"},
-    { label: "Apperences", key: "appearences"},
+    { label: "Appearences", key: "appearences"},
     { label: "Minutes", key: "minutes"},
     { label: "Yellow Cards", key: "yellow_cards"},
     { label: "Red Cards", key: "red_cards"},
@@ -57,9 +57,9 @@ export default function ComparePlayers(){
     const [params] = useSearchParams();
     const navigate = useNavigate();
 
-    const [dataA, setDataB] = useState(null);
+    const [dataA, setDataA] = useState(null);
     const [dataB, setDataB] = useState(null);
-    conts [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
     useEffect(() => {
@@ -73,7 +73,7 @@ export default function ComparePlayers(){
         }
 
         Promise.all([getPlayerSeasonStats(idA), getPlayerSeasonStats(idB)])
-            .then(([a, b]) => { setDataB(a); setDataB(b); })
+            .then(([a, b]) => { setDataA(a); setDataB(b); })
             .catch(err => setError(err.message || "Something went wrong"))
             .finally(() => setLoading(false));
     }, []);
@@ -109,8 +109,8 @@ export default function ComparePlayers(){
             <div className="season_tag">{dataA?.season} Season</div>
 
             <div className="compare_table">
-                {STAT_ROWS.map(([label, key]) => (
-                    <StatRow key={key} label={label} valA={dataA?.[key]} valB={dataB?.[key]} />
+                {STAT_ROWS.map(({label, key}) => (
+                    <StatRow key={key} label={label} A={dataA?.[key]} B={dataB?.[key]} />
                 ))}
             </div>
         </div>
