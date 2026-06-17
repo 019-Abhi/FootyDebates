@@ -25,6 +25,8 @@ Footy Debates is a full-stack football player comparison web application that al
 2. Select a player for each side of the comparison.
 3. View a side-by-side statistical comparison.
 
+NOTE: Lamine Yamal and Kylian Mbappe are the two players added right now, I will soon add more players :)
+
 ## Live Demo
 
 Frontend: https://footy-debates.vercel.app/
