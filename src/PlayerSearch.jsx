@@ -99,7 +99,7 @@ function PlayerSearch() {
                             ) : resultsA.length ? (
                                 resultsA.map((p) => (
                                 <button key={p.id} className="search_block_option" type="button" onClick={() => handleSelectA(p)}>
-                                    <img src={p.photo} alt={p.name} />
+                                    {/* <img src={p.photo} alt={p.name} /> */}
                                     <span>{p.name}</span>
                                 </button>
                                 ))
