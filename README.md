@@ -1,16 +1,36 @@
-# React + Vite
+# Footy Debates ⚽
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Footy Debates is a full-stack football player comparison web application that allows users to search for players and compare their season statistics side-by-side.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Search players from a custom database
+* Compare two players across key statistics
+* View player information including club, nationality, and age
+* Admin dashboard for adding, editing, and deleting players
+* REST API built with Express and SQLite
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* React Router
+* Vite
+* Node.js
+* Express.js
+* SQLite (sql.js)
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Search for two players on the homepage.
+2. Select a player for each side of the comparison.
+3. View a side-by-side statistical comparison.
+
+## Live Demo
+
+Frontend: https://footy-debates.vercel.app/
+
+Backend API: https://footydebates.onrender.com/
+
+## Author
+
+Abhijith V Ashok
