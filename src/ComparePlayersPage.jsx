@@ -6,7 +6,7 @@ import "./ComparePlayersPage.css";
 const STAT_ROWS = [
     { label: "Goals", key: "goals"},
     { label: "Assists", key: "assists"},
-    { label: "Appearences", key: "appearences"},
+    { label: "Appearences", key: "appearances"},
     { label: "Minutes", key: "minutes"},
     { label: "Yellow Cards", key: "yellow_cards"},
     { label: "Red Cards", key: "red_cards"},
