@@ -100,8 +100,6 @@ export default function Admin() {
                         <input name ="season" value = {form.season} onChange={handleChange} placeholder="2025" /></label><br /><br />
                     <label className="full">Photo URL *
                         <input name ="photo" value = {form.photo} onChange={handleChange} placeholder="https://.." /></label><br /><br />
-                    <label className="full"> Club Logo URL *
-                        <input name ="club_logo" value = {form.club_logo} onChange={handleChange} placeholder="https://..." /></label><br /><br />
 
                 
                 </div>
