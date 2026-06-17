@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./admin.css";
+// import "./admin.css";
 
 const API = "http://localhost:3001/api/players";
 
@@ -79,50 +79,49 @@ export default function Admin() {
     }
 
     return (
-        <div classname = "admin-page">
+        <div className = "admin_page">
             <p>Admin</p>
 
-            <div classname="admin_form">
-                <h2>{EditingId ? "Edit Player" : "Add Player"}</h2>
+            <div className="admin_form">
+                <h2>{editingId ? "Edit Player" : "Add Player"}</h2>
 
-                <div classname = "player details">
-                    <label>Name *
-                        <input name ="name" value = {form.name} onChange={handleChange} placeholder="Kylian Mbappe" /></label>
+                <div className = "player_details">
+                    <label>*Name
+                        <input name ="name" value = {form.name} onChange={handleChange} placeholder="Kylian Mbappe" /></label> <br /><br />
                     <label>Nationality
-                        <input name ="nationality" value = {form.nationality} onChange={handleChange} placeholder=" France" /> </label>
+                        <input name ="nationality" value = {form.nationality} onChange={handleChange} placeholder=" France" /> </label><br /><br />
                     <label>Age
-                        <input name ="age" value = {form.age} onChange={handleChange} placeholder="26" /></label>
+                        <input name ="age" value = {form.age} onChange={handleChange} placeholder="26" /></label><br /><br />
                     <label>Position
-                        <input name ="position" value = {position} onChange={handleChange} placeholder="Striker" /></label>
+                        <input name ="position" value = {form.position} onChange={handleChange} placeholder="Striker" /></label><br /><br />
                     <label>Club
-                        <input name ="club" value = {club} onChange={handleChange} placeholder="Los Blancos" /></label>
-                    <label>Season *
-                        <input name ="season" value = {form.season} onChange={handleChange} placeholder="2025" /></label>
-                    <label classname="full">Photo URL *
-                        <input name ="photo" value = {form.photo} onChange={handleChange} placeholder="https://.." /></label>
+                        <input name ="club" value = {form.club} onChange={handleChange} placeholder="Los Blancos" /></label><br /><br />
+                    <label>*Season
+                        <input name ="season" value = {form.season} onChange={handleChange} placeholder="2025" /></label><br /><br />
+                    <label className="full">Photo URL *
+                        <input name ="photo" value = {form.photo} onChange={handleChange} placeholder="https://.." /></label><br /><br />
                     <label className="full"> Club Logo URL *
-                        <input name ="club_logo" value = {form.club_logo} onChange={handleChange} placeholder="https://..." /></label>
-                    <label>Name *
-                        <input name ="name" value = {form.name} onChange={handleChange} placeholder="Kylian Mbappe" /></label>
+                        <input name ="club_logo" value = {form.club_logo} onChange={handleChange} placeholder="https://..." /></label><br /><br />
+
                 
                 </div>
 
                 <div className="stats">
-                    <label>Goals<input name="goals" type="number" value={form.goals} onChange={handleChange} placeholder="0" /></label>
-                    <label>Assists<input name="assists" type="number" value={form.assists} onChange={handleChange} placeholder="0" /></label>
-                    <label>Appearances<input name="appearances" type="number" value={form.appearances} onChange={handleChange} placeholder="0" /></label>
-                    <label>Minutes<input name="minutes" type="number" value={form.minutes} onChange={handleChange} placeholder="0" /></label>
-                    <label>Yellow Cards<input name="yellow_cards" type="number" value={form.yellow_cards} onChange={handleChange} placeholder="0" /></label>
-                    <label>Red Cards<input name="red_cards" type="number" value={form.red_cards} onChange={handleChange} placeholder="0" /></label>
+                    <label>Goals<input name="goals" type="number" value={form.goals} onChange={handleChange} placeholder="0" /></label><br /><br />
+                    <label>Assists<input name="assists" type="number" value={form.assists} onChange={handleChange} placeholder="0" /></label><br /><br />
+                    <label>Appearances<input name="appearances" type="number" value={form.appearances} onChange={handleChange} placeholder="0" /></label><br /><br />
+                    <label>Minutes<input name="minutes" type="number" value={form.minutes} onChange={handleChange} placeholder="0" /></label><br /><br />
+                    <label>Yellow Cards<input name="yellow_cards" type="number" value={form.yellow_cards} onChange={handleChange} placeholder="0" /></label><br /><br />
+                    <label>Red Cards<input name="red_cards" type="number" value={form.red_cards} onChange={handleChange} placeholder="0" /></label><br /><br />
                 </div>
 
                 {msg && <p className="admin_msg">{msg}</p>}
 
-                <div classname = "form_actions">
-                    <button className="button" onClick={handleSubmit} disabled="loading">
+                <div className = "form_actions">
+                    <button className="button" onClick={handleSubmit} disabled={loading}>
                         {loading? "Saving " : editingId ? "Update player" : "Add player"}
                     </button>
-                    {editingId && <button classname = "button_2" onClick={handlecancel}>Cancel</button>}
+                    {editingId && <button className = "button_2" onClick={handlecancel}>Cancel</button>}
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 .search_panel {
 
   margin-top: 3rem;
-  width: 95%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -9,9 +9,7 @@
   gap:20px;
   border: 1px solid rgb(41, 48, 58);
   background: rgb(16, 19, 25);
-  border-radius: 16px;
   padding: 1.75 rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -55,11 +53,9 @@
   width: 100%;
   padding: 0.9rem 1rem;
   background: #151a22;
-  border: 1px solid #2a313c;
   border-radius: 12px;
   color: #e8edf5;
   font-size: 0.95rem;
-  transition: all 0.2s ease;
 }
 
 .search_block_input:focus {
@@ -79,6 +75,7 @@
   z-index: 20;
   max-height: 240px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  scroll-behavior: smooth;
 }
 
 .search_block_option {
