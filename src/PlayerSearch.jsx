@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { searchPlayers } from "./services/apicall.js";
 import "./PlayerSearch.css";
 
-const SEASON = 2023;
+const SEASON = 2025;
 const MIN_QUERY_LEN = 3;
 const DEBOUNCE_MS = 300;
 

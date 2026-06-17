@@ -20,9 +20,9 @@ function StatRow({ label, A, B}) {
 
     return (
         <div className="stat_row">
-            <span className={`stat-val ${winsA ? "stat-winner" : ""}`}>{A ?? "—"}</span>
-            <span className="stat-label">{label}</span>
-            <span className={`stat-val stat-val-right ${winsB ? "stat-winner" : ""}`}>{B ?? "—"}</span>
+            <span className={`stat_val ${winsA ? "stat_winner" : ""}`}>{A ?? "—"}</span>
+            <span className="stat_label">{label}</span>
+            <span className={`stat_val stat_val_right ${winsB ? "stat_winner" : ""}`}>{B ?? "—"}</span>
         </div>
     )
 
@@ -38,11 +38,10 @@ function PlayerCard({data}) {
             <div className="player_info">
 
                 <span className="player_name">{data.name}</span>
-                <span className="player-meta">{data.nationality} · {data.age} yrs</span>
+                <span className="player_meta">{data.nationality} · {data.age} yrs</span>
 
                 {data.club && (
-                    <div className="player-club">
-                        {data.club_logo && <img className="club-logo" src={data.club_logo} alt={data.club} />}
+                    <div className="player_club">
                         <span>{data.club}</span>
                     </div>
                 )}
@@ -81,7 +80,6 @@ export default function ComparePlayers(){
     if (loading) return (
         <div className="compare_shell">
             <div className="compare_loading">
-                <div className="spinner" /> 
                 <p>Loading stats</p>
             </div>
         </div>

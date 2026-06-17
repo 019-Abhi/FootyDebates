@@ -1,23 +1,33 @@
 .compare_shell {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 2rem 1.25rem 4rem;
-    font-family: inherit;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  font-family: inherit;
+
+  margin-top: 3rem;
+  width: 100%;
+  gap:20px;
+  background: rgb(195, 204, 222);
+  padding: 1.75 rem;
+  border-radius: 8px;
+
 }
 
-.back_btn{
-    background: none;
-    border: none;
-    font-size: 0.85rem;
-    color: #888;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 2rem;
-    /* letter-spacing: 0.02em; */
-    transition: color 0.15s;
+.back_button {
+  background: rgb(175, 175, 185);
+  border: none;
+  font-size: 0.85rem;
+  color: #000000;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+
+  width: 80px;
+  height: 40px;
 }
 
-.compare-header {
+.compare_header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -25,7 +35,7 @@
   margin-bottom: 1.5rem;
 }
 
-.player-card {
+.player_card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,3 +43,125 @@
   text-align: center;
 }
 
+.player_photo {
+  width: 80px;
+  height: 80px;
+  background: #f0f0f0;
+}
+
+.player_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.player_name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.player_meta {
+  font-size: 1rem;
+  color: #000000;
+  letter-spacing: 0.02em;
+}
+
+.player_club {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.15rem;
+}
+
+
+.player_club span {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.season_tag {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #000000;
+  letter-spacing: 0.08em; 
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  border-top: 1px solid #000000;
+  padding-top: 1.25rem;
+}
+
+.compare_table {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stat_row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0.45rem 0;
+  gap: 200px;
+  
+}
+
+.stat_label {
+  font-size: 0.9rem;
+  color: #000000;
+  text-align: center;
+  padding: 0 0.75rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.stat_val {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+
+.stat_val_right {
+  text-align: left;
+}
+
+.stat_winner {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.compare_loading,
+.compare_error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 40vh;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.compare_error button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #666;
+  transition: border-color 0.15s;
+}
+.compare_error button:hover { border-color: #aaa; }
+
+
+
+@media (max-width: 480px) {
+  .player_photo { width: 60px; height: 60px; }
+  .player_name { font-size: 0.88rem; }
+  .stat_label { font-size: 0.7rem; padding: 0 0.4rem; }
+  .stat_val { font-size: 0.85rem; }
+}
